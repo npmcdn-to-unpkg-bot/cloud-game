@@ -16,30 +16,23 @@ gem 'therubyracer'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'jquery-turbolinks'
-
-group :production do
-# gem 'unicorn'
-end
+  
 
 group :development, :test do
-  # gem "rspec-rails"
-  # gem "factory_girl_rails", "~> 4.4.1"
-  # gem 'rb-fsevent', group: :darwin
   gem 'spring'
   gem 'bullet'
   gem 'guard-livereload'
   gem 'pry-rails'
   gem 'pry-doc'
-  gem 'pry-byebug', '1.3.3'
+  gem 'pry-byebug'
   gem 'pry-remote'
   gem 'awesome_print'
-  gem 'did_you_mean', '0.9.10'
+  gem 'did_you_mean'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
 end
 
 group :development do
-  # gem 'capistrano-rails', require: false
   gem 'annotate'
 end
