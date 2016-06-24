@@ -50,4 +50,3 @@ test:
 production:
   <<: *default
   database: cloud-game_production
-  username: cloud-game
