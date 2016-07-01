@@ -19,7 +19,7 @@ default: &default
   # socket: /tmp/mysql.sock
 
 development:
-<<: *default
+  <<: *default
   database: cloud-game_development
 
 # Warning: The database defined as "test" will be erased and
