@@ -1,4 +1,14 @@
 #js-card-container.container
+  .card.item.clearfix.js-card-content
+      = link_to game_path(1), class: "card-link"
+        |
+      .card-image
+        = image_tag "http://usedoor.jp/wp-content/uploads/google_play/games-jikkyou-douga-toukou/050.png", class: "card-image"
+      .card-content
+        h3.card-title
+          | test用game
+        p.card-detail
+          | こいつをたたくとgame1の仮想ましんを起動するよ
   - 10.times do
     .card.item.clearfix.js-card-content
       = link_to "https://www.youtube.com/?hl=ja&gl=JP", class: "card-link"
@@ -8,5 +18,5 @@
       .card-content
         h3.card-title
           | なんちゃらゲーム
-        p.card-detail 
+        p.card-detail
           | hogehogehogehogehogehogehogehogehoge
