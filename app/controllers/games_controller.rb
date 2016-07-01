@@ -12,9 +12,9 @@ class GamesController < ApplicationController
     # end
     begin
       system.(vpgu_start_command)
-      redirect_to action: :index, notice: '仮想マシンの起動に成功しました！！'
+      redirect_to action: :index, success: '仮想マシンの起動に成功しました！！'
     rescue
-      redirect_to action: :index, notice: '仮想マシンの起動に失敗しました'
+      redirect_to action: :index, danger: '仮想マシンの起動に失敗しました'
     end
   end
 
