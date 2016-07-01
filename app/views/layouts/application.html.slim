@@ -13,6 +13,6 @@ html
       = render partial: 'layouts/header'
       .contents
         = flash.each do |key, value|
-          content_tag(:div, value, class: "alert alert-#{key}")
+         = content_tag(:div, value, class: "alert alert-#{key}")
 
         = yield
