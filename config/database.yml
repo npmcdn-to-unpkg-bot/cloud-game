@@ -11,11 +11,12 @@
 #
 default: &default
   adapter: mysql2
-  encoding: utf8
+#  encoding: utf8
   pool: 5
-  username: root
+  username: take
   password:
-  socket: /tmp/mysql.sock
+  socket: /var/run/mysqld/mysqld.sock
+  #socket: /tmp/mysql.sock
 
 development:
   <<: *default
