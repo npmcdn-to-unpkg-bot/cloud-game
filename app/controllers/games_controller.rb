@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  after_action: :redirect_to_main_view
+  after_action :redirect_to_main_view, only: :show
 
   def index
   end
