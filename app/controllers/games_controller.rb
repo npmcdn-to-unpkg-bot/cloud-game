@@ -5,10 +5,17 @@ class GamesController < ApplicationController
 
   def show
     vpgu_start_command = "vgpu start #{current_user.id} #{params[:id]}"
-    if system.(vgpu_start_command)
+    # if system.("vgpu start", current_user.id, params[:id])
+    #   redirect_to action: :index, notice: '仮想マシンの起動に成功しました！！'
+    # else
+    #   redirect_to action: :index, notice: '仮想マシンの起動に失敗しました'
+    # end
+    begin
+      system.(vpgu_start_command)
       redirect_to action: :index, notice: '仮想マシンの起動に成功しました！！'
-    else
+    rescue
       redirect_to action: :index, notice: '仮想マシンの起動に失敗しました'
     end
   end
+
 end
