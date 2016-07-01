@@ -1,11 +1,19 @@
 require File.expand_path('../boot', __FILE__)
 
 # require 'rails/all'
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "active_resource/railtie"
-require "rails/test_unit/railtie"
-require "sprockets/railtie"
+%w(
+  action_controller
+  action_view
+  action_mailer
+  active_job
+  rails/test_unit
+  sprockets
+).each do |framework|
+  begin
+    require "#{framework}/railtie"
+  rescue LoadError
+  end
+end
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
