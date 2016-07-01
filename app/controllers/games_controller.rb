@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  after_action :redirect_to_main_view, only: :show
+  # after_action :redirect_to_main_view, only: :show
 
   def index
   end
@@ -21,8 +21,8 @@ class GamesController < ApplicationController
   end
 
   private
-  def redirect_to_main_view
-    redirect_to "http://157.82.3.170:3000/done.html"
-  end
+  # def redirect_to_main_view
+  #   redirect_to "http://157.82.3.170:3000/done.html"
+  # end
 
 end
